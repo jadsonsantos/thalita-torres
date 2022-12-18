@@ -1,0 +1,43 @@
+.hero {
+  padding: 64px 0;
+
+  @media (min-width: 768px) {
+    padding: 120px 0;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin-bottom: 64px;
+
+    @media (min-width: 768px) {
+      max-width: 788px;
+      font-size: 48px;
+      line-height: 72px;
+    }
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+    color: #000000;
+
+    @media (min-width: 768px) {
+      max-width: 673px;
+      font-size: 28px;
+      line-height: 42px;
+    }
+  }
+
+  &__name {
+    font-weight: 500;
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+}
