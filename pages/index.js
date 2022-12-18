@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
+import { Roboto } from '@next/font/google'
 import styles from '../styles/Home.module.scss'
+import Hero from '../components/Hero'
 
-const inter = Inter({ subsets: ['latin'] })
+const roboto = Roboto({ weight: '400', subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <Hero />
         <div className={styles.description}>
           <p>
             Get started by editing&nbsp;
@@ -66,10 +68,10 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className={inter.className}>
+            <h2 className={roboto.className}>
               Docs <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>
+            <p className={roboto.className}>
               Find in-depth information about Next.js features and&nbsp;API.
             </p>
           </a>
@@ -80,10 +82,10 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className={inter.className}>
+            <h2 className={roboto.className}>
               Learn <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>
+            <p className={roboto.className}>
               Learn about Next.js in an interactive course with&nbsp;quizzes!
             </p>
           </a>
@@ -94,10 +96,10 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className={inter.className}>
+            <h2 className={roboto.className}>
               Templates <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>
+            <p className={roboto.className}>
               Discover and deploy boilerplate example Next.js&nbsp;projects.
             </p>
           </a>
@@ -108,10 +110,10 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <h2 className={inter.className}>
+            <h2 className={roboto.className}>
               Deploy <span>-&gt;</span>
             </h2>
-            <p className={inter.className}>
+            <p className={roboto.className}>
               Instantly deploy your Next.js site to a shareable URL
               with&nbsp;Vercel.
             </p>
