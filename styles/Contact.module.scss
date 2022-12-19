@@ -1,0 +1,39 @@
+.contact {
+  background: #000000;
+  padding: 128px 0;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+
+  &__title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 42px;
+  }
+
+  &__text {
+    margin: 32px 0;
+    max-width: 673px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 260px 0;
+
+    &__title {
+      font-size: 48px;
+      line-height: 72px;
+    }
+
+    &__text {
+      margin: 64px 0;
+      font-size: 28px;
+      line-height: 42px;
+    }
+  }
+}
