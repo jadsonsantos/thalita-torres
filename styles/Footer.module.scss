@@ -1,0 +1,35 @@
+.footer {
+  background: #EAEBEF;
+  padding: 24px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__text {
+    color: #333333;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.02em;
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+
+  @media (min-width: 768px) {
+    padding: 52px 0;
+
+    &__container {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}
