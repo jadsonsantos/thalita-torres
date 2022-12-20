@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Hero from '../components/Hero'
 import Footer from '../components/Footer'
 import Contact from '../components/Contact'
+import Illustration from '../components/Illustration'
+import Services from '../components/Services'
 
 export default function Home() {
   return (
@@ -14,6 +15,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
+      <Illustration />
+      <Services />
       <Contact />
       <Footer />
       {/* <div className={styles.description}>
