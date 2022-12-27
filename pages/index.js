@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Contact from '../components/Contact'
 import Illustration from '../components/Illustration'
 import Services from '../components/Services'
+import Cases from '../components/Cases'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Hero />
       <Illustration />
       <Services />
+      <Cases />
       <Contact />
       <Footer />
       {/* <div className={styles.description}>

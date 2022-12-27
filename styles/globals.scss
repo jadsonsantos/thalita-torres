@@ -108,6 +108,12 @@ ul {
   text-decoration: underline;
 }
 
+.paragraph {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     // color-scheme: dark;
