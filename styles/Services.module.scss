@@ -35,18 +35,11 @@
       line-height: 72px;
     }
 
-    &__list {
-      display: flex;
-      justify-content: space-between;
-      gap: 70px;
-    }
-
     &__item {
       margin: 128px 0 0;
     }
 
     &__title {
-      margin: 0 0 32px;
       font-size: 28px;
       line-height: 42px;
     }
@@ -54,6 +47,14 @@
     &__description {
       font-size: 28px;
       line-height: 42px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      gap: 70px;
     }
   }
 }
