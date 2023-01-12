@@ -94,13 +94,11 @@ ul {
 }
 
 .container {
-  width: 100%;
   max-width: 1370px;
-  padding: 0 24px;
-  margin: auto;
+  margin: 0 24px;
 
   @media (min-width: 1370px) {
-    padding: 0;
+    margin: 0 auto;
   }
 }
 
