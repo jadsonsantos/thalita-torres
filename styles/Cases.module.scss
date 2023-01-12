@@ -3,16 +3,18 @@
   padding: 128px 0;
 
   &__item {
-    margin-bottom: 64px;
+    width: 326px;
+    margin: 0 auto 40px;
   }
 
   &__card {
+    position: relative;
     width: 326px;
     height: 326px;
   }
 
   &__title {
-    margin-top: 24px;
+    margin: 24px 0 0;
     font-weight: 500;
   }
 
@@ -20,11 +22,13 @@
     &__list {
       display: flex;
       flex-wrap: wrap;
+      gap: 24px;
     }
+  }
 
+  @media (min-width: 1440px) {
     &__item {
-      width: 100%;
-      flex: 50%;
+      width: auto;
     }
 
     &__card {

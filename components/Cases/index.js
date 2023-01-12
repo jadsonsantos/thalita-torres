@@ -1,14 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../../styles/Cases.module.scss'
-import Text from '../Text'
 import { cases } from './data.js'
 
 const Cases = () => (
   <section className={styles.cases}>
     <div className="container">
       <ul className={styles.cases__list}>
-        {cases.map(({ icon, title, name, color }) => (
+        {cases.map(({ title, name, color }) => (
           <li className={styles.cases__item} key={title}>
             <Link href="">
               <div
@@ -19,9 +18,8 @@ const Cases = () => (
                   className={styles.cases__image}
                   src={`/images/${name}-desktop.svg`}
                   alt={title}
-                  priority
-                  width={672}
-                  height={672}
+                  fill
+                  sizes="(max-width: 768px) 326px, (max-width: 1200px) 326px, 672px"
                 />
               </div>
               <p className={`${styles.cases__title} paragraph`}>{title}</p>
