@@ -1,3 +1,6 @@
 .illustration {
-  &__image {}
+  &__image {
+    display: block;
+    margin: auto;
+  }
 }
