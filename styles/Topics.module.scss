@@ -1,0 +1,41 @@
+.topic {
+  padding-bottom: 128px;
+
+  &__heading {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    margin: 64px 0 0;
+  }
+
+  &__description {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+  }
+
+  &__icon {
+    margin-bottom: 32px;
+  }
+
+  @media (min-width: 768px) {
+    &__heading {
+      font-weight: 700;
+    }
+
+    &__item {
+      margin: 120px 0 0;
+      flex: 0 0 395px;
+    }
+  }
+}
