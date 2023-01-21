@@ -1,5 +1,5 @@
 .topic {
-  padding-bottom: 128px;
+  padding: 128px 0;
 
   &__heading {
     font-weight: 500;
@@ -29,6 +29,8 @@
   }
 
   @media (min-width: 768px) {
+    padding: 220px 0;
+
     &__heading {
       font-weight: 700;
     }
