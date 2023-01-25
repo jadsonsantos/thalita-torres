@@ -1,0 +1,18 @@
+.header {
+  &__logo {
+    display: none;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 46px 0;
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__logo {
+      display: block;
+    }
+  }
+}
