@@ -1,0 +1,17 @@
+.navbar {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+  }
+
+  @media (min-width: 1024px) {
+    &__list {
+      gap: 64px;
+    }
+  }
+}
