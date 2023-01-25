@@ -1,0 +1,15 @@
+.introduction {
+  &__title {
+    margin: 64px 0;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 768px) {
+    &__title {
+      margin: 32px 0;
+    }
+  }
+}
