@@ -21,11 +21,15 @@
 
   @media (min-width: 768px) {
     &__item {
-      flex: unset;
+      flex: 0 0 25%;
     }
   }
 
   @media (min-width: 1370px) {
+    &__list {
+      gap: 24px;
+    }
+
     img {
       width: revert;
       height: revert;
