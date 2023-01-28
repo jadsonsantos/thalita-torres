@@ -21,6 +21,13 @@ const Cases = () => (
                   fill
                   sizes="(max-width: 768px) 326px, (max-width: 1200px) 326px, 672px"
                 />
+                <Image
+                  className={styles.cases__cover}
+                  src={`/images/${name}-cover.svg`}
+                  alt={title}
+                  fill
+                  sizes="(max-width: 768px) 326px, (max-width: 1200px) 326px, 672px"
+                />
               </div>
               <p className={`${styles.cases__title} paragraph`}>{title}</p>
             </Link>

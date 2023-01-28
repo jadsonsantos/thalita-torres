@@ -18,6 +18,11 @@
     font-weight: 500;
   }
 
+  &__cover {
+    opacity: 0;
+    transition: .5s ease;
+  }
+
   @media (min-width: 768px) {
     &__list {
       display: flex;
@@ -29,6 +34,12 @@
   @media (min-width: 1440px) {
     &__item {
       width: auto;
+
+      &:hover {
+        .cases__cover {
+          opacity: 1;
+        }
+      }
     }
 
     &__card {

@@ -15,7 +15,7 @@ const cases = [
     title: 'Master Degree (CESAR School) – 2021',
   },
   {
-    name: 'penup',
+    name: 'samsung',
     color: '#ffffff',
     title: 'PENUP (Samsung) – 2019',
   },
