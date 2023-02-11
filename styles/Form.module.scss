@@ -1,1 +1,11 @@
-.form {}
+.form {
+
+  &__submit {
+    padding: 18px 30px;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+    background: #2E2E2E;
+    color: #FFFFFF;
+  }
+}
