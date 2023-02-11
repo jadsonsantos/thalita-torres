@@ -1,5 +1,5 @@
-import Link from './Link'
-import styles from '../styles/Contact.module.scss'
+import Link from '../Link'
+import styles from './Contact.module.scss'
 
 const Contact = () => (
   <section className={styles.contact}>
