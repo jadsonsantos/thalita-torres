@@ -5,7 +5,7 @@ import Layout from './layout'
 
 export default function Contact() {
   return (
-    <Layout>
+    <Layout page="contact">
       <Head>
         <title>Thalita Torres | Contact</title>
       </Head>
