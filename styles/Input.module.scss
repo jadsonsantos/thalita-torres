@@ -1,0 +1,36 @@
+.input {
+  &__label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: -0.02em;
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    margin-bottom: 64px;
+    padding: 16px 0;
+    border: none;
+    border-bottom: 2px solid #979797;
+    outline: none;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+    color: #979797;
+  }
+
+  @media (min-width: 768px) {
+    &__label {
+      font-size: 36px;
+      line-height: 54px;
+    }
+
+    &__field {
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+}
