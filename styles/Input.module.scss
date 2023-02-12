@@ -16,9 +16,15 @@
     border: none;
     border-bottom: 2px solid #979797;
     outline: none;
+    font-family: Roboto, sans-serif;
     font-size: 18px;
     line-height: 27px;
     letter-spacing: -0.02em;
+    color: #979797;
+  }
+
+  &__field::placeholder {
+    font-family: Roboto, sans-serif;
     color: #979797;
   }
 
