@@ -9,8 +9,13 @@ const roboto = Roboto({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={roboto.className}>
+    <>
+      <style jsx global>{`
+        html {
+          font-family: ${roboto.style.fontFamily};
+        }
+      `}</style>
       <Component {...pageProps} />
-    </main>
+    </>
   )
 }
