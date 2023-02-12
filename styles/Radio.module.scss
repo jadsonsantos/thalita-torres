@@ -1,0 +1,18 @@
+.input {
+  &__label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.02em;
+  }
+
+  &__field {
+    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+}
