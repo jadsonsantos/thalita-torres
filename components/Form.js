@@ -2,6 +2,8 @@ import styles from '../styles/Form.module.scss'
 import Input from './Input'
 import { useState } from 'react'
 import TextArea from './TextArea'
+import Radio from './Radio'
+import Label from './Label'
 
 const Form = () => {
   const [name, setName] = useState('')
@@ -9,6 +11,7 @@ const Form = () => {
   const [company, setCompany] = useState('')
   const [source, setSource] = useState('')
   const [message, setMessage] = useState('')
+  const [project, setProject] = useState('Mobile App')
 
   return (
     <section className={styles.form}>
@@ -38,6 +41,25 @@ const Form = () => {
             value={company}
             setValue={setCompany}
           />
+          <Label label="What do you need?" />
+          <Radio
+            options={[
+              'Mobile App',
+              'Saas Dashboard',
+              'Website',
+              'I’m not sure yet',
+              'Other',
+            ]}
+            value={project}
+            setValue={setProject}
+          />
+          <Input
+            placeholder="If other, please insert your need here"
+            id="project"
+            type="text"
+            value={project}
+            setValue={setProject}
+          />
           <Input
             label="How did you find me?"
             placeholder="Google? Dribbble? Referral?"
@@ -51,6 +73,7 @@ const Form = () => {
             placeholder="To help me understand a little bit more of your needs, and then I'll get in touch with you."
             type="text"
             id="message"
+            rows="3"
             value={message}
             setValue={setMessage}
           />
