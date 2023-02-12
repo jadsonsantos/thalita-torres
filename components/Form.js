@@ -12,6 +12,7 @@ const Form = () => {
   const [source, setSource] = useState('')
   const [message, setMessage] = useState('')
   const [project, setProject] = useState('Mobile App')
+  const [specificProject, setSpecificProject] = useState('')
 
   return (
     <section className={styles.form}>
@@ -55,10 +56,10 @@ const Form = () => {
           />
           <Input
             placeholder="If other, please insert your need here"
-            id="project"
+            id="specificProject"
             type="text"
-            value={project}
-            setValue={setProject}
+            value={specificProject}
+            setValue={setSpecificProject}
           />
           <Input
             label="How did you find me?"
