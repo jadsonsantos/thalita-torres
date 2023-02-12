@@ -1,11 +1,10 @@
 import styles from '../styles/Input.module.scss'
+import Label from './Label'
 
 const TextArea = ({ id, label, setValue, ...props }) => {
   return (
     <>
-      <label htmlFor={id} className={`${styles.input__label}`}>
-        {label}
-      </label>
+      <Label label={label} id={id} />
       <textarea
         id={id}
         name={id}

@@ -116,7 +116,6 @@ button {
   }
 
   @media (min-width: 1370px) {
-
     margin: {
       left: auto;
       right: auto;
@@ -161,15 +160,17 @@ button {
 
 main {
   &.contact {
-    display: flex;
-    justify-content: space-between;
+    margin: 0;
   }
 
   @media (min-width: 768px) {
     margin-top: 128px;
 
     &.contact {
+      display: flex;
+      justify-content: space-between;
       padding: 220px 0;
+      margin: auto;
     }
   }
 }
