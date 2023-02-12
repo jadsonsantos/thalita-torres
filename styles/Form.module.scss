@@ -1,4 +1,7 @@
 .form {
+  padding-bottom: 128px;
+  max-width: 672px;
+  flex: 1;
 
   &__submit {
     padding: 18px 30px;
@@ -7,5 +10,9 @@
     letter-spacing: -0.02em;
     background: #2E2E2E;
     color: #FFFFFF;
+  }
+
+  @media (min-width: 768px) {
+    padding-bottom: 0;
   }
 }

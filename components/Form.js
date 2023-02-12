@@ -24,7 +24,7 @@ const Form = () => {
             label="What's your best e-mail?"
             placeholder="Please insert your e-mail here"
             id="email"
-            type="text"
+            type="email"
             value={email}
             setValue={setEmail}
           />
