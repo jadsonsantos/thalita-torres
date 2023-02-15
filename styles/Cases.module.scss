@@ -32,7 +32,10 @@
   }
 
   @media (min-width: 1440px) {
+    padding: 220px 0;
+
     &__item {
+      margin-bottom: 0;
       width: auto;
 
       &:hover {
