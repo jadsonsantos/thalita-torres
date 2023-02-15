@@ -1,22 +1,20 @@
 import Image from 'next/image'
-import { data } from './data'
 import styles from '../../styles/Gallery.module.scss'
+import galleryDesktop from '../../public/images/gallery-desktop.png'
+import galleryMobile from '../../public/images/gallery-mobile.png'
+import useDeviceDetect from '../../utils/useDeviceDetect'
 
-const Gallery = () => (
-  <section className={styles.gallery}>
-    <ul className={styles.gallery__list}>
-      {data.map(({ alt }, index) => (
-        <li key={alt} className={styles.gallery__item}>
-          <Image
-            src={`/images/about-${index + 1}.png`}
-            alt={alt}
-            width={460}
-            height={460}
-          />
-        </li>
-      ))}
-    </ul>
-  </section>
-)
+const Gallery = () => {
+  const { isMobile } = useDeviceDetect()
+
+  return (
+    <section className={styles.gallery}>
+      <Image
+        src={isMobile ? galleryMobile : galleryDesktop}
+        alt="Galeria de imagens"
+      />
+    </section>
+  )
+}
 
 export default Gallery
