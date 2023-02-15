@@ -1,17 +1,15 @@
 import Image from 'next/image'
-import DesktopIllustration from '../public/images/illustration-desktop.png'
-import MobileIllustration from '../public/images/illustration-mobile.png'
 import useDeviceDetect from '../utils/useDeviceDetect'
 import styles from '../styles/Illustration.module.scss'
 
-const Illustration = () => {
+const Illustration = ({ mobileIllustration, desktopIllustration }) => {
   const { isMobile } = useDeviceDetect()
 
   return (
     <section className={styles.illustration}>
       <Image
         className={styles.illustration__image}
-        src={isMobile ? MobileIllustration : DesktopIllustration}
+        src={isMobile ? mobileIllustration : desktopIllustration}
         alt="Ilustração"
       />
     </section>
