@@ -3,7 +3,7 @@ import Link from './Link'
 
 const Introduction = () => (
   <section className={styles.introduction}>
-    <div className="container">
+    <div className={`container ${styles.introduction__container}`}>
       <h1 className={`title ${styles.introduction__title}`}>Let's talk.</h1>
       <p className={`paragraph ${styles.introduction__text}`}>
         Do you live nearby? How about a cup of coffee? Or a very cold tea (don’t
