@@ -15,7 +15,6 @@ const Footer = () => {
           <Link
             href="https://www.linkedin.com/in/jadsonsantos/"
             className={styles.footer__link}
-            isExternal
           >
             this
           </Link>{' '}

@@ -9,11 +9,7 @@ const Hero = () => (
         <br />{' '}
         <strong className={styles.hero__name}>I’m Thalita Torres.</strong>
         <br /> A staff product designer at{' '}
-        <Link
-          className={styles.hero__link}
-          href="https://nubank.com.br/"
-          isExternal
-        >
+        <Link className={styles.hero__link} href="https://nubank.com.br/">
           Nubank.
         </Link>
         <br />

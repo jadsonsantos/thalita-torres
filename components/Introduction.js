@@ -12,7 +12,7 @@ const Introduction = () => (
       <p className={`paragraph ${styles.introduction__text}`}>
         Live far away? Don’t worry, for partnerships, business inquiries or just
         for saying hi, send a "hello there" to{' '}
-        <Link isExternal href="mailto:hello.thalitatorres@gmail.com">
+        <Link href="mailto:hello.thalitatorres@gmail.com">
           hello.thalitatorres@gmail.com
         </Link>{' '}
         or fill the form on the side.

@@ -13,11 +13,7 @@ const Bio = () => (
         <div>
           <h1 className={styles.bio__title}>
             I'm a designer living in Sao Paulo/BR, working at{' '}
-            <Link
-              className={styles.bio__link}
-              href="https://nubank.com.br/"
-              isExternal
-            >
+            <Link className={styles.bio__link} href="https://nubank.com.br/">
               Nubank
             </Link>{' '}
             and trying to make people's lives easier.
