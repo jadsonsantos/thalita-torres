@@ -5,6 +5,7 @@ import styles from '../../styles/Header.module.scss'
 import useHeader from './useHeader'
 import classNames from 'classnames'
 import MenuButton from '../MenuButton'
+import Link from 'next/link'
 
 const Header = () => {
   const { isActive, setActive, handleClick } = useHeader()
@@ -16,7 +17,13 @@ const Header = () => {
       })}
     >
       <div className={`container ${styles.header__container}`}>
-        <Image src={logo} alt="logo" className={styles.header__logo} />
+        <Link href="/">
+          <Image
+            src={logo}
+            alt="Logo do site da Thalita Torres"
+            className={styles.header__logo}
+          />
+        </Link>
         <MenuButton />
         <NavBar />
       </div>
