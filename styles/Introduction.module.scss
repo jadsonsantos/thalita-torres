@@ -13,7 +13,7 @@
   @media (min-width: 768px) {
     &__container {
       position: sticky;
-      top: calc(var(--header-height) + 220px);
+      // top: calc(var(--header-height) + 220px);
     }
 
     &__title {

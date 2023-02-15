@@ -1,0 +1,10 @@
+.contact {
+  margin: 0;
+
+  @media (min-width: 768px) {
+    padding: 220px 0;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+}
