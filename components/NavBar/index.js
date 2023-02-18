@@ -4,12 +4,16 @@ import { links } from './data'
 import useNavBar from './useNavBar'
 import classNames from 'classnames/bind'
 
-const NavBar = () => {
+const NavBar = ({ isActive }) => {
   const { isActiveLink } = useNavBar()
   let cx = classNames.bind(styles)
+  const customClass = cx({
+    navbar: true,
+    'navbar--active': isActive,
+  })
 
   return (
-    <nav className={styles.navbar}>
+    <nav className={customClass}>
       <ul className={styles.navbar__list}>
         {links.map(({ name, link }) => {
           const customClass = cx({
@@ -19,7 +23,9 @@ const NavBar = () => {
 
           return (
             <li key={name} className={customClass}>
-              <Link href={link}>{name}</Link>
+              <Link className={styles.navbar__link} href={link}>
+                {name}
+              </Link>
             </li>
           )
         })}

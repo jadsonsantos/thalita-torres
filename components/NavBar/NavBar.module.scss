@@ -1,21 +1,38 @@
 .navbar {
-  &__list {
-    display: flex;
-  }
+  display: none;
+  padding-top: 46px;
 
   &__item {
     font-size: 24px;
     line-height: 36px;
     letter-spacing: -0.02em;
+    text-align: center;
 
     &--active {
       font-weight: bold;
     }
   }
 
+  &__link {
+    display: inline-block;
+    padding: 18px 0;
+  }
+
+  &--active {
+    display: block;
+  }
+
   @media (min-width: 1024px) {
+    display: block;
+    padding-top: 0;
+
     &__list {
+      display: flex;
       gap: 64px;
+    }
+
+    &__link {
+      padding: 46px 0;
     }
   }
 }
