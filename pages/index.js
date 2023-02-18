@@ -24,7 +24,7 @@ export default function Home() {
         desktopIllustration={DesktopIllustration}
       />
       <Services />
-      <Cases />
+      <Cases backgroundColor="#EAEBEF" />
     </Layout>
   )
 }

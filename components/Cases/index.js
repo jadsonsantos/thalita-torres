@@ -3,8 +3,8 @@ import Link from 'next/link'
 import styles from '../../styles/Cases.module.scss'
 import { cases } from './data.js'
 
-const Cases = () => (
-  <section className={styles.cases}>
+const Cases = ({ backgroundColor = '' }) => (
+  <section className={styles.cases} style={{ backgroundColor }}>
     <div className="container">
       <ul className={styles.cases__list}>
         {cases.map(({ title, name, color }) => (
