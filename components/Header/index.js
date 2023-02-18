@@ -3,19 +3,20 @@ import logo from '../../public/icons/logo.svg'
 import Image from 'next/image'
 import styles from '../../styles/Header.module.scss'
 import useHeader from './useHeader'
-import classNames from 'classnames'
+import classNames from 'classnames/bind'
 import MenuButton from '../MenuButton'
 import Link from 'next/link'
 
 const Header = () => {
-  const { isActive, setActive, handleClick } = useHeader()
+  let cx = classNames.bind(styles)
+  const { isActive, handleClick } = useHeader()
+  const customClass = cx({
+    header: true,
+    'header--active': isActive,
+  })
 
   return (
-    <header
-      className={classNames(styles.header, {
-        'header--active': isActive,
-      })}
-    >
+    <header className={customClass}>
       <div className={`container ${styles.header__container}`}>
         <Link href="/">
           <Image
@@ -24,8 +25,8 @@ const Header = () => {
             className={styles.header__logo}
           />
         </Link>
-        <MenuButton />
-        <NavBar />
+        <MenuButton isActive={isActive} handleClick={handleClick} />
+        <NavBar isActive={isActive} />
       </div>
     </header>
   )

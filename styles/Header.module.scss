@@ -6,17 +6,24 @@
   right: 0;
   z-index: 100;
   background: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
   &__logo {
     display: none;
   }
 
+  &--active {
+    height: 100vh;
+  }
+
   @media (min-width: 1024px) {
-    padding: 46px 0;
+    padding: 0;
 
     &__container {
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
 
     &__logo {
