@@ -1,4 +1,5 @@
 import Link from '../Link'
+import NextLink from 'next/link'
 import styles from './Contact.module.scss'
 
 const Contact = () => (
@@ -11,7 +12,11 @@ const Contact = () => (
         <Link href="mailto:hello.thalitatorres@gmail.com">
           hello.thalitatorres@gmail.com
         </Link>{' '}
-        or fill this form and I get in touch with you.
+        or fill{' '}
+        <NextLink href="/contact" className="external-link">
+          this form
+        </NextLink>{' '}
+        and I get in touch with you.
       </p>
       <p className={styles.contact__text}>
         You can also give a look at my{' '}
