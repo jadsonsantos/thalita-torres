@@ -1,6 +1,9 @@
 import styles from '../styles/Radio.module.scss'
+import { forwardRef } from 'react'
 
-const Radio = ({ options, value, setValue, ...props }) => {
+const Radio = forwardRef((props, ref) => {
+  const { options, ...otherProps } = props
+
   return (
     <>
       {options.map((option) => (
@@ -13,17 +16,15 @@ const Radio = ({ options, value, setValue, ...props }) => {
             id={option}
             name={option}
             type="radio"
-            value={option}
-            checked={option === value}
-            onChange={({ target }) => setValue(target.value)}
             className={styles.input__field}
-            {...props}
+            ref={ref}
+            {...otherProps}
           />
           {option}
         </label>
       ))}
     </>
   )
-}
+})
 
 export default Radio

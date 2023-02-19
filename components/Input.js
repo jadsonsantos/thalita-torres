@@ -1,19 +1,22 @@
 import styles from '../styles/Input.module.scss'
 import Label from './Label'
+import { forwardRef } from 'react'
 
-const Input = ({ id, label, setValue, ...props }) => {
+const Input = forwardRef((props, ref) => {
+  const { id, label, ...otherProps } = props
+
   return (
     <>
       <Label id={id} label={label} />
       <input
         id={id}
         name={id}
-        onChange={({ target }) => setValue(target.value)}
         className={styles.input__field}
-        {...props}
+        ref={ref}
+        {...otherProps}
       />
     </>
   )
-}
+})
 
 export default Input

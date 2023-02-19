@@ -1,19 +1,22 @@
 import styles from '../styles/Input.module.scss'
 import Label from './Label'
+import { forwardRef } from 'react'
 
-const TextArea = ({ id, label, setValue, ...props }) => {
+const TextArea = forwardRef((props, ref) => {
+  const { id, label, ...otherProps } = props
+
   return (
     <>
       <Label label={label} id={id} />
       <textarea
         id={id}
         name={id}
-        onChange={({ target }) => setValue(target.value)}
         className={styles.input__field}
-        {...props}
+        ref={ref}
+        {...otherProps}
       ></textarea>
     </>
   )
-}
+})
 
 export default TextArea

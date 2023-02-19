@@ -1,46 +1,49 @@
 import styles from '../styles/Form.module.scss'
 import Input from './Input'
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import TextArea from './TextArea'
 import Radio from './Radio'
 import Label from './Label'
+import { useForm } from 'react-hook-form'
 
 const Form = () => {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [company, setCompany] = useState('')
-  const [source, setSource] = useState('')
-  const [message, setMessage] = useState('')
-  const [project, setProject] = useState('Mobile App')
-  const [specificProject, setSpecificProject] = useState('')
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm()
+  const ref = useRef(null)
+
+  const onSubmit = async (data) => {
+    console.log(data)
+  }
 
   return (
     <section className={styles.form}>
       <div className="container">
-        <form className="">
+        <form className="" onSubmit={handleSubmit(onSubmit)} noValidate>
           <Input
             label="How do you like to be called?"
             placeholder="Please insert your name here"
             id="name"
             type="text"
-            value={name}
-            setValue={setName}
+            ref={ref}
+            {...register('name')}
           />
           <Input
             label="What's your best e-mail?"
             placeholder="Please insert your e-mail here"
             id="email"
             type="email"
-            value={email}
-            setValue={setEmail}
+            {...register('email')}
           />
           <Input
             label="What's your company?"
             placeholder="Please insert your company here"
             id="company"
             type="text"
-            value={company}
-            setValue={setCompany}
+            {...register('company')}
           />
           <Label label="What do you need?" />
           <Radio
@@ -51,23 +54,20 @@ const Form = () => {
               'I’m not sure yet',
               'Other',
             ]}
-            value={project}
-            setValue={setProject}
+            {...register('project')}
           />
           <Input
             placeholder="If other, please insert your need here"
             id="specificProject"
             type="text"
-            value={specificProject}
-            setValue={setSpecificProject}
+            {...register('specificProject')}
           />
           <Input
             label="How did you find me?"
             placeholder="Google? Dribbble? Referral?"
             id="source"
             type="text"
-            value={source}
-            setValue={setSource}
+            {...register('source')}
           />
           <TextArea
             label="Tell me about your project"
@@ -75,8 +75,7 @@ const Form = () => {
             type="text"
             id="message"
             rows="3"
-            value={message}
-            setValue={setMessage}
+            {...register('message')}
           />
           <button className={styles.form__submit} type="submit">
             Let's do this!
