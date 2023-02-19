@@ -1,9 +1,9 @@
-import styles from '../styles/Form.module.scss'
-import Input from './Input'
-import { useState, useRef } from 'react'
-import TextArea from './TextArea'
-import Radio from './Radio'
-import Label from './Label'
+import styles from './Form.module.scss'
+import Input from '../Input'
+import { useRef } from 'react'
+import TextArea from '../TextArea'
+import Radio from '../Radio'
+import Label from '../Label'
 import { useForm } from 'react-hook-form'
 
 const Form = () => {
