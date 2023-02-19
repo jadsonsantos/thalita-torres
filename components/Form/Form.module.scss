@@ -3,7 +3,12 @@
   max-width: 672px;
   flex: 1;
 
+  label:not([for="name"]) {
+    margin-top: 64px;
+  }
+
   &__submit {
+    margin-top: 64px;
     padding: 18px 30px;
     font-size: 18px;
     line-height: 27px;
