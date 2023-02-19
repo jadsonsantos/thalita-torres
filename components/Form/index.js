@@ -16,11 +16,8 @@ const Form = () => {
     formState: { errors },
   } = useForm()
   const ref = useRef(null)
-  const { nameValidator, emailValidator, messageValidator } = useContactForm()
-
-  const onSubmit = async (data) => {
-    console.log(data)
-  }
+  const { nameValidator, emailValidator, messageValidator, onSubmit } =
+    useContactForm()
 
   const errosExample = errors.email || errors.message || errors.name
 
