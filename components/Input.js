@@ -1,21 +1,34 @@
 import styles from '../styles/Input.module.scss'
 import Label from './Label'
 import { forwardRef } from 'react'
+import classNames from 'classnames/bind'
 
 const Input = forwardRef((props, ref) => {
-  const { id, label, ...otherProps } = props
+  const { id, label, errors, errorMessage, ...otherProps } = props
+  let cx = classNames.bind(styles)
+  const customClass = cx({
+    input__field: true,
+    'input__field--error': errors,
+  })
 
   return (
-    <>
+    <div className={styles.input}>
       <Label id={id} label={label} />
       <input
         id={id}
         name={id}
-        className={styles.input__field}
+        className={customClass}
         ref={ref}
         {...otherProps}
       />
-    </>
+      {errors ? (
+        <span className={styles.input__error}>
+          {errors.message || errorMessage}
+        </span>
+      ) : (
+        ''
+      )}
+    </div>
   )
 })
 

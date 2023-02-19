@@ -5,6 +5,7 @@ import TextArea from '../TextArea'
 import Radio from '../Radio'
 import Label from '../Label'
 import { useForm } from 'react-hook-form'
+import useContactForm from './useForm'
 
 const Form = () => {
   const {
@@ -14,6 +15,7 @@ const Form = () => {
     formState: { errors },
   } = useForm()
   const ref = useRef(null)
+  const { nameValidator, emailValidator, messageValidator } = useContactForm()
 
   const onSubmit = async (data) => {
     console.log(data)
@@ -28,15 +30,18 @@ const Form = () => {
             placeholder="Please insert your name here"
             id="name"
             type="text"
+            errors={errors.name}
             ref={ref}
-            {...register('name')}
+            {...register('name', nameValidator)}
           />
           <Input
             label="What's your best e-mail?"
             placeholder="Please insert your e-mail here"
             id="email"
             type="email"
-            {...register('email')}
+            errors={errors.email}
+            errorMessage="Please enter a valid email address"
+            {...register('email', emailValidator)}
           />
           <Input
             label="What's your company?"
@@ -75,7 +80,9 @@ const Form = () => {
             type="text"
             id="message"
             rows="3"
-            {...register('message')}
+            errors={errors.message}
+            errorMessage="Please enter a message"
+            {...register('message', messageValidator)}
           />
           <button className={styles.form__submit} type="submit">
             Let's do this!
