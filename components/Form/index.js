@@ -6,6 +6,7 @@ import Radio from '../Radio'
 import Label from '../Label'
 import { useForm } from 'react-hook-form'
 import useContactForm from './useForm'
+import ErrorMessage from '../ErrorMessage'
 
 const Form = () => {
   const {
@@ -20,6 +21,8 @@ const Form = () => {
   const onSubmit = async (data) => {
     console.log(data)
   }
+
+  const errosExample = errors.email || errors.message || errors.name
 
   return (
     <section className={styles.form}>
@@ -87,6 +90,11 @@ const Form = () => {
           <button className={styles.form__submit} type="submit">
             Let's do this!
           </button>
+          <ErrorMessage
+            isCustom
+            errors={errosExample}
+            errorMessage="There are incomplete fields on your form. Please fill in before submitting."
+          />
         </form>
       </div>
     </section>

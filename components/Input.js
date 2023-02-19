@@ -2,6 +2,7 @@ import styles from '../styles/Input.module.scss'
 import Label from './Label'
 import { forwardRef } from 'react'
 import classNames from 'classnames/bind'
+import ErrorMessage from './ErrorMessage'
 
 const Input = forwardRef((props, ref) => {
   const { id, label, errors, errorMessage, ...otherProps } = props
@@ -21,13 +22,7 @@ const Input = forwardRef((props, ref) => {
         ref={ref}
         {...otherProps}
       />
-      {errors ? (
-        <span className={styles.input__error}>
-          {errors.message || errorMessage}
-        </span>
-      ) : (
-        ''
-      )}
+      <ErrorMessage errors={errors} errorMessage={errorMessage} />
     </div>
   )
 })
