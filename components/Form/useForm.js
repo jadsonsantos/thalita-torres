@@ -35,10 +35,10 @@ const useForm = () => {
       }
 
       await emailjs.send(
-        'service_6jm3g1j',
-        'template_jzzd5ll',
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         templateParams,
-        '8GESXPaRiyLj6AqPc'
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
       )
 
       // reset()
