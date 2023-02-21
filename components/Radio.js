@@ -15,6 +15,7 @@ const Radio = forwardRef((props, ref) => {
           <input
             id={option}
             name={option}
+            value={option}
             type="radio"
             className={styles.input__field}
             ref={ref}
