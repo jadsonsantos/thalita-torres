@@ -19,6 +19,15 @@ const useForm = () => {
     required: true,
   }
 
+  const sendEmail = async () => {
+    await emailjs.send(
+      process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+      process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      templateParams,
+      process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+    )
+  }
+
   const onSubmit = async (data) => {
     const { name, email, company, project, specificProject, source, message } =
       data
@@ -34,13 +43,7 @@ const useForm = () => {
         message,
       }
 
-      await emailjs.send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-      )
-
+      sendEmail()
       // reset()
       alert('mensagem enviada')
     } catch (e) {
