@@ -11,10 +11,9 @@
   }
 
   @media (min-width: 768px) {
-    &__container {
-      position: sticky;
-      // top: calc(var(--header-height) + 220px);
-    }
+    position: sticky;
+    top: calc(var(--header-height) + 220px);
+    max-height: 350px;
 
     &__title {
       margin: 0 0 32px;
