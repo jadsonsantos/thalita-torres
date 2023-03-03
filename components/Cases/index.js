@@ -9,28 +9,28 @@ const Cases = ({ backgroundColor = '' }) => (
       <ul className={styles.cases__list}>
         {cases.map(({ title, name, color }) => (
           <li className={styles.cases__item} key={title}>
-            <Link href="">
-              <div
-                className={styles.cases__card}
-                style={{ backgroundColor: color }}
-              >
-                <Image
-                  className={styles.cases__image}
-                  src={`/images/${name}-desktop.svg`}
-                  alt={title}
-                  fill
-                  sizes="(max-width: 768px) 326px, (max-width: 1200px) 326px, 672px"
-                />
-                <Image
-                  className={styles.cases__cover}
-                  src={`/images/${name}-cover.svg`}
-                  alt={title}
-                  fill
-                  sizes="(max-width: 768px) 326px, (max-width: 1200px) 326px, 672px"
-                />
-              </div>
-              <p className={`${styles.cases__title} paragraph`}>{title}</p>
-            </Link>
+            {/* <Link href=""> */}
+            <div
+              className={styles.cases__card}
+              style={{ backgroundColor: color }}
+            >
+              <Image
+                className={styles.cases__image}
+                src={`/images/${name}-desktop.svg`}
+                alt={title}
+                fill
+                sizes="(max-width: 768px) 326px, (max-width: 1200px) 326px, 672px"
+              />
+              <Image
+                className={styles.cases__cover}
+                src={`/images/${name}-cover.svg`}
+                alt={title}
+                fill
+                sizes="(max-width: 768px) 326px, (max-width: 1200px) 326px, 672px"
+              />
+            </div>
+            <p className={`${styles.cases__title} paragraph`}>{title}</p>
+            {/* </Link> */}
           </li>
         ))}
       </ul>
